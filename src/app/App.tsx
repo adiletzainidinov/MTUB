@@ -1,8 +1,11 @@
+import { Button } from '../shared/ui/Button/Button';
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <>
+      <Button customVariant='secondary'>Все</Button>
+    </>
+  );
+};
 
-export default App
+export default App;
