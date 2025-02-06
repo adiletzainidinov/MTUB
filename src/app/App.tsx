@@ -1,9 +1,8 @@
-import './index.css'
+import AppRouter from "./providers/routes/AppRouter"
 
-const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+const App = () =>{
+return <AppRouter/>
+
+} 
 
 export default App
