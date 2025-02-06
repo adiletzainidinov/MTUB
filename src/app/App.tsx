@@ -1,12 +1,11 @@
-import { Button } from "../shared/ui/Button/Button"
-
+import { Button } from '../shared/ui/Button/Button';
 
 const App = () => {
   return (
     <>
-    <Button>Click me</Button>
+      <Button customVariant='secondary'>Все</Button>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
