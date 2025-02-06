@@ -1,8 +1,8 @@
 
-export const adminRoutes = [
-   {
-      path: 'about',
-      element: <h3>AdminRoutes</h3>,
-   },
+// export const adminRoutes = [
+//    {
+//       path: 'about',
+//       element: <h3>AdminRoutes</h3>,
+//    },
    
-]
+// ]

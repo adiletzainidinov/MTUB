@@ -1,8 +1,8 @@
-import AppRouter from "./providers/routes/AppRouter"
 
-const App = () =>{
-return <AppRouter/>
-
-} 
+const App = () => {
+  return (
+    <div>App</div>
+  )
+}
 
 export default App

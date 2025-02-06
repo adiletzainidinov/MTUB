@@ -1,10 +1,10 @@
-import { routes } from "./routes";
+// import { routes } from "./routes";
 
-export const userRoutes = [
-    {
-       path: routes.USER.profile,
-       element: <h3>Profile</h3>,
-    },
+// export const userRoutes = [
+//     {
+//        path: routes.USER.profile,
+//        element: <h3>Profile</h3>,
+//     },
 
- ]
+//  ]
  
