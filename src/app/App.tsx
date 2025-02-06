@@ -1,7 +1,11 @@
+import { Button } from "../shared/ui/Button/Button"
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+    <Button>Click me</Button>
+    </>
   )
 }
 
