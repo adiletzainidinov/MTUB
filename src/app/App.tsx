@@ -1,4 +1,5 @@
-import HomePage from "../pages/HomePage/ui/HomePage";
+import HomePage from '../pages/HomePage/ui/HomePage';
+import SearchBarReused from '../shared/ui/SearchBar/SearchBarReused';
 
 const App = () => {
   const videoId = 'OPVEbGrd4ps'; // ID видео
@@ -7,13 +8,15 @@ const App = () => {
     <>
       <div
         style={{
+          width: '100%',
+          maxWidth: '480px',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
+          margin: '0 auto',
         }}
       >
-        <HomePage videoId={videoId}/>
+        <SearchBarReused />
+        <HomePage videoId={videoId} />
       </div>
     </>
   );

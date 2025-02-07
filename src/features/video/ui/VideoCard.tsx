@@ -29,13 +29,13 @@ export const VideoCard: React.FC<VideoCardProps> = ({
   const preview =
     thumbnail || (id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : '');
 
-  const maxTitleLength = 42;
+  const maxTitleLength = 53;
   const truncatedTitle =
     videoDetailsTitle && videoDetailsTitle.length > maxTitleLength
       ? videoDetailsTitle.substring(0, maxTitleLength) + '...'
       : videoDetailsTitle;
 
-  const maxSubTitleLength = 42;
+  const maxSubTitleLength = 53;
   const truncatedSubTitle =
     videoDetailsChannelName && videoDetailsViews && videoDetailsPublishedAt
       ? `${videoDetailsChannelName} • ${videoDetailsViews} • ${videoDetailsPublishedAt}`.substring(
@@ -73,7 +73,6 @@ const VideoCardContainer = styled.div`
   max-width: 480px; /* Ограничение максимальной ширины */
   display: flex;
   flex-direction: column;
-  margin: 0 auto; /* Центрирует контейнер */
 `;
 
 const VideoCardPreviev = styled.div`
