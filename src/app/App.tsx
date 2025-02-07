@@ -1,36 +1,21 @@
-import { useEffect, useState } from 'react';
-import { getVideoDuration } from '../features/video/model/getVideoDuration';
-import { Button } from '../shared/ui/Button/Button';
-import { VideoCard } from '../features/video/ui/VideoCard';
+import HomePage from "../pages/HomePage/ui/HomePage";
 
 const App = () => {
-  const [duration, setDuration] = useState<string>('');
-
-  useEffect(() => {
-    const fetchDuration = async () => {
-      const videoDuration = await getVideoDuration('OPVEbGrd4ps');  // ID видео
-      setDuration(videoDuration);
-    };
-
-    fetchDuration();
-  }, []);
+  const videoId = 'OPVEbGrd4ps'; // ID видео
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <Button>Все</Button>
-      <VideoCard
-        id="OPVEbGrd4ps"
-        title="Как изучать FSD?"
-        duration={duration}
-      />
-    </div>
+    <>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <HomePage videoId={videoId}/>
+      </div>
+    </>
   );
 };
 
