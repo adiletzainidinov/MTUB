@@ -4,7 +4,7 @@ const palette: Palette = {
   primary: {
     black: '#030303',
     white: '#FFFFFF',
-    lightGray: '#F2F2F2',
+    lightGray: '#C9C9C9',
     red: '#FF0000',
   },
   secondary: {
