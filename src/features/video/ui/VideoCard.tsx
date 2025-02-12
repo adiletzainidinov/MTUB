@@ -73,6 +73,7 @@ const VideoCardContainer = styled.div`
   max-width: 480px; /* Ограничение максимальной ширины */
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 `;
 
 const VideoCardPreviev = styled.div`
@@ -138,7 +139,7 @@ const VideoDescription = styled.div`
   }
   .subTitle {
     font-size: 12px;
-    color: ${theme.palette.primary.lightGray};
+    color: ${theme.palette.primary.lightGrayBlack};
     line-height: 1.2;
     margin-top: 4px;
     font-weight: 400;

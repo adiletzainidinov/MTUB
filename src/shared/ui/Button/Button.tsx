@@ -6,15 +6,18 @@ interface ButtonProps {
   children: ReactNode;
   onClick?: () => void;
   customVariant?: 'primary' | 'secondary'; 
+  className?: string;
+  
 }
 
 export const Button: FC<ButtonProps> = ({
   children,
   onClick,
   customVariant = 'primary',
+  className
 }) => {
   return (
-    <StyledButton customVariant={customVariant} onClick={onClick}>
+    <StyledButton customVariant={customVariant} onClick={onClick} className={className}>
       {children}
     </StyledButton>
   );
