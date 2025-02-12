@@ -1,80 +1,25 @@
-// import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-// import PrivatRouter from './PrivatRouter'
-// import ErrorPage from './ErrorPage'
-// import { useAppSelector } from '../../../shared/lib/hooks/useAppSelector'
-// import { guestRoutes } from './quesRoutes'
-// import { userRoutes } from './userRouter'
-// import { adminRoutes } from './adminRoutes'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from '../layout/Layout';
+import HomePage from '../../../pages/HomePage/ui/HomePage';
 
-// const AppRouter = () => {
-//    const { isAuth, role } = useAppSelector((state) => state.auth)
 
-//    // console.log(role)
-//    // console.log(isAuth);
-   
 
-//    const router = createBrowserRouter([
-//       {
-//          path: '/',
-//          element: (
-//             <PrivatRouter
-//                isAuth={role === 'GUEST' ? !isAuth : isAuth}
-//                role={role}
-//                isAllowed={['USER', 'GUEST']}
-//                component={'lending'}
-//                fallBackPath="/admin"
-//             />
-//          ),
-//       },
-//       {
-//          path: '/auth',
-//          element: (
-//             <PrivatRouter
-//                isAuth={!isAuth}
-//                role={role}
-//                isAllowed={['GUEST']}
-//                component={'GuestLayout'}
-//                fallBackPath="/"
-//             />
-//          ),
-//          children: guestRoutes,
-//       },
+const AppRouter = () => {
 
-//       {
-//          path: '/user',
-//          element: (
-//             <PrivatRouter
-//                isAuth={isAuth}
-//                role={role}
-//                isAllowed={['USER']}
-//                component={'UserLoyaut'}
-//                fallBackPath="/"
-//             />
-//          ),
-//          children: userRoutes,
-//       },
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <HomePage videoId='' />,
+        },
+      ],
+    },
+  ]);
 
-//       {
-//          path: '/admin',
-//          element: (
-//             <PrivatRouter
-//                isAuth={isAuth}
-//                role={role}
-//                isAllowed={['ADMIN']}
-//                component={'AdminLoyaut'}
-//                fallBackPath="/"
-//             />
-//          ),
-//          children: adminRoutes,
-//       },
+  return <RouterProvider router={router} />;
+};
 
-//       {
-//          path: '*',
-//          element: <ErrorPage />,
-//       },
-//    ])
-
-//    return <RouterProvider router={router} />
-// }
-
-// export default AppRouter
+export default AppRouter;
