@@ -1,9 +1,6 @@
-import HomePage from '../pages/HomePage/ui/HomePage';
-import SearchBarReused from '../shared/ui/SearchBar/SearchBarReused';
+import AppRouter from './providers/routes/AppRouter';
 
 const App = () => {
-  const videoId = 'OPVEbGrd4ps'; // ID видео
-
   return (
     <>
       <div
@@ -15,8 +12,7 @@ const App = () => {
           margin: '0 auto',
         }}
       >
-        <SearchBarReused />
-        <HomePage videoId={videoId} />
+        <AppRouter />
       </div>
     </>
   );
